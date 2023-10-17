@@ -35,5 +35,14 @@ pipeline {
                 sh 'docker push chinmaygbhat/banking-finance:1.0'
             }
         }
+        stage ('Configure My Servers with Terraform, Ansible and Deploying '){
+            steps {
+                dir('MyServer'){
+                sh 'sudo chmod 600 AWSec2instancekey'
+                sh 'terraform init'
+                sh 'terraform validate'
+                sh 'terraform apply --auto-approve'
+                }
+            }
     }
 }
