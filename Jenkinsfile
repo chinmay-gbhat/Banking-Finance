@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/arman-cpu/insureproject.git'
+                git branch: 'main', url: 'https://github.com/chinmay-gbhat/Banking-Finance.git'
             }
         }
         stage('Build Package') {
